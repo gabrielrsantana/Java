@@ -9,7 +9,7 @@ public class ConversaoDatas {
 	public static void main(String[] args) throws ParseException {
 		Calendar c = Calendar.getInstance();
 		Date data = c.getTime();
-
+		//MOSTRA O FORMATO BRASILEIRO DE DATA DIA/MES/ANO
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		System.out.println("Data formatada: "+ sdf.format(data));
 
