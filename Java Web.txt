@@ -1,0 +1,26 @@
+ acomplar back end para chamar alteracoes que queremos fazer
+usando JSP java Server Pages
+linguagem de script de tipo aberto que permite gerar conteudo
+dinamico apra as paginas da internet.
+ao inves de html usamos JSP que e dinamico.
+O usuario nao consegue ver a codificacao JSP ,pois esta e convertida
+ diretamente  e enviada e apresentado ao usuario apenas a codificacao html
+
+
+1- abrir o IDE(Netbeans da aula),novo projeto e escolher java With Ant, Java web,depois escolhe
+ Web Application.
+2-  project name: pessoaWeb
+3- se perguntar, adicionar um servidor, escolhe Apache TomCat or TomEE
+4-escolhe onde esta o Tomcat (10.0.6 - versão da aula) instalado,
+5- escolhe a senha
+6- cria um pacote,e coloc auma classe Pessoa e Conexao
+7- coloca o menu no codigo index.html, e cria menu dropdown para
+cadastrar e consultar pessoa.
+8- adicionar na pasta Libraries do projeto, o drive "PostgreSql JDBC Driver"
+9-cria uma novo arquivo receberdadospessoa.JSP
+
+10- <%@page import="Classes.Pessoa" %>
+    <%@page contentType="text/html" pageEnconding="utf-8"%> 
+   <%
+    
+   %>

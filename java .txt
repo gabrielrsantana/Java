@@ -1,0 +1,411 @@
+1982 pela SUN
+..foi engavetado ate 1994,1995 a netscape fez parceria
+com a SUn 
+- java independe de plataforma e maquina
+sintase do marcador Applet
+JAVA SDK kit de desenvolvimento
+JAVA SE para APis 
+JAVA JRE 
+- aproveitamento de codigo
+-orientado a objetos
+-distributivel,basta ter a JVM na mquina pra 
+  rodar
+- multithread
+-DINAMICA
+- arquitetura neutra
+- portatil
+- Alto desempenho
+JVM e apenas uma especificacao e sua implementa
+cao é diferente de fornecedor para fornecedor.
+Por enquanto,vamos entender a arquitetura aceita de JVM conforme
+definido .
+meujava.java --> JAVAC --> meujava.Class
+
+frameWorks ou IDEs
+1-Netbeans ,mais facil
+2- Eclipse,mais usado no mercado
+3-IntelliJ ,mais pesado para rodar
+
+system.out.println("ola");
+
+if(){}
+
+
+char opcao ='1';
+1
+switch (opcao){
+case '1':{ System.out.println("programa de inclusao");
+break;
+}
+case '2':{ System.out.println("programa de alteracao");
+break;
+}
+default:
+System.out.println("opcao invalida"+opcao);
+
+}
+
+
+
+qtd = 1;
+do{
+System.out.println("");
+qts++;
+}while(qtd  <=10);
+
+
+for(int x;x< 10;x++){
+ System.out.println(x);
+}
+
+//usando break para quebrar o laco de repeticao
+for(int x;x< 10;x++){
+if(x == 5){
+  break;
+}
+ System.out.println(x);
+}
+
+
+/graficos
+
+JOptionsPane
+
+int idade;
+//converteporque o JOpntion pane da como string
+idade = Integer.ParseInt(JOptionPane.showInputDialog("informe a idade"));
+//JOptionPane.showMessageDialog(null,"a pessoa tem:"+idade+" anos de idade",null,"INFORMATION_MESSAGE");
+
+
+public class Pessoa{
+  public string nomePessoa;
+  public int idadePessoa;
+
+}
+
+//abstracao  -pilar do java 
+
+
+
+//encapsulamento
+//no codigo eclipse aperta CTRL+3 , GENERATE stRINGS para gerar string
+//DEPOIS ctrl+3, PARA generate Getters and Setters
+
+//coloca os atributos como private,para quando instanciar
+o objeto, e apertar . ,não listar os atributos mais, so aparece como metodo.
+
+private pessoa;
+private idadePessoa;
+
+public string getNome(){
+ return nomePessoa;
+
+}
+
+//heranca
+
+public class PessoasFisica extends Pessoa{
+ public string cpf;
+
+}
+
+
+
+//polimorfismo
+public class Polimorfismo{
+
+ public static void main(String[] args) {
+  Mamifero mamifero1 = new Elefante();
+  System.out.println("cota diaria de leite de elefante"+mamifero.cotaDiariaLeite());
+
+ Mamifero mamifero2 = new Rato();
+  System.out.println("cota diaria de leite de elefante"+mamifero.cotaDiariaLeite());
+
+  }
+
+}
+
+
+abstract class Mamifero{
+  public abstract double cotaDiariaLeite();
+
+
+}
+
+public class Elefante extends Mamifero{
+ public double cotaDiariaLeite(){
+	return 30.0;
+  }
+
+}
+
+public class Rato extends Mamifero{
+ public double cotaDiariaLeite(){
+	return 0.5;
+  }
+
+}
+=================
+
+Linguagem de programacao JAVA 
+
+Aula 02 interfaces
+
+A interface "obrigar" a um determinado grupo de classes a ter metodos
+ em comum,obrigando a serem implementados.
+nas interfaces existes somente assinaturas e metodos e propriedeas.
+cabendo a classe que a utilizara realizar a implementar das assinaturas,dado com
+portamentos praticos aos metodos. os metodos tem que ter mesma assinatura,retornar mesmo
+parametro,mesmo nome.
+
+
+-Clica na classe que implementa a interface criada..clica Add unimplemented methods
+@override  - é uma anotation em JAVA
+
+
+//Enumeradores
+//definindo enumeraador denteo da classe
+//tem que importar o enum na programa principal
+--------------
+        package 
+import Construtores.Aluno.MATRICULA;
+import Construtores.Aluno.STATUS;
+public static void main(string args[]){
+
+Aluno alu = new Aluno(8,8,8);
+ if(mediaAlunoFinal < 6){
+  alu.situacaoAluno = STATUS.REPROVADO
+}else{
+  alu.situacaoAluno = STATUS.APROVADO
+  }
+
+}
+-----------
+
+public class Aluno{
+
+private double nota1;
+private double nota2;
+private double nota3;
+STATUS situacaoAluno;
+
+public Aluno(double nota1,double nota2,double nota3){
+ this.nota1 = nota1;
+ this.nota2 = nota2;
+ this.nota3 = nota3;
+}
+
+public enum STATUS{
+  APROVADO,
+  REPROVADO
+}
+
+public double calcularMediaAluno(){
+
+}
+
+}//fim aluno
+
+
+
+//modificadores de acesso aula 05
+private <-- mais critico,acesso so para propria classe, não importa localizacao dentro do pacote,ou se foi herdada.
+default <-- nao e explicito,so acessa dentro do mesmo pacote
+protected <-- acesso a classes dentro do mesmo pacote
+public  <--menos critico
+
+
+
+///Arrays
+
+int[] numeros = new int[4];
+
+int[] numeros2;
+numeros2 = new int[10];
+
+int[] iniciaValores={12,32,54,6,8,89,64,64,6}; //ja sabe o tamanho quando declara os valores
+
+**na declaracao de arrays,cada elemento recebe um valor
+padrao, sendo zero para tipo primitivos,falso para booleanos,
+e null para referencias
+
+
+String paises = new String[5];
+paises[0]= "brasil";
+paises[1]= "china";
+
+for(string lista:paises){
+ Systen.out.println(lista);
+}
+
+for(int i=0;i < 4;i++){
+// tem que importar o JOptionPane
+//import javax.swing.JOptionPane;
+   paises[i]= JOptionPane.showinputDialog("informe um país:");	
+//se for numero inteiro converte com Integer.parseInt()
+}
+
+
+//vetores bidimensionais
+
+float [] alunos = {"joao","jose","maria"};
+
+                            3 linhas 4 colunas
+float [][] notas = new float[3][4];
+
+ for (int i=0;i<3;i++ {
+ System.out.println("Aluno :"+alunos[i]);
+  for (int j=0;j<3;j++ {
+   notas[i][j] =Float.parseFloat(JOptionPane.showInputDialog("nota: "));
+   somaNotas= somaNotas+ notas[i][j];
+  }
+
+	
+}
+ 
+///Colections
+e uma estrutura de dados que permite armazenar varios objetos.
+Java colecao tambem e um objeto
+- adicao de elementos..
+-remocao '
+-acesso de ele'
+-pesquisa de elementos
+
+
+
+arraylist não é um array. e uma implementacao da Interface List.
+outra implementacao desta interface e o LinkedList.
+- melhor especializado na parte central do array
+
+//para importar uma feature
+seleciona e CTRl+SHIFT+O ou ctrl+shift+s
+
+
+//LinkedList
+especializado nas estremidades,cabeça e fim.
+
+
+//Classes WRAPPER
+possuem metodos publicos disponivel na subclasse Object.
+Ex: metodo equals(Object) para comparacao
+    metodo toString() para imprimir o conteudo de um objeto em formato de texto
+
+
+
+vantagens de usar tipos primitivos
+-sao bem rapidos
+-consomem pouca memoria
+-permitem operacoes mais complexas
+-sao bastantes eficientes em lacos e expressoes
+
+Auxoboxing( wraping automático): é o processo de conversão automática que
+para que um tipo primitivo passe a ser um objeto utilizando uma classe Wrapper.
+
+integer ----autoboxing----> Integer.parseInt(x)
+          ( quando converte o valor)
+integer <---Unboxing------- Integer
+           (quando devolve pra variavelo valor convertido)
+
+
+//Generics
+
+forma de tipar uma classe, e reutilizar o tipo varias vezes;
+
+private List<T> listaAeronaves = new ArrayList<>();
+
+
+
+//Anotations
+anotacoes que criamos com java, tipo @Override
+@Inherited @Deprecated
+
+uso de anotações:
+- Documentacao
+- Compilação
+- IDE
+- Estrutura de teste, exemplo JUnit
+-recipiente IoC, por exemplo  , como Spring
+-serializacao, como XML
+-programacao orientada a aspecto (AOP), Spring AOP
+-Servidores de aplicativos, xemplos , Container EJB, serviço Web
+- Mapeamento objeto-relacional(ORM), eexemplo Hibernate , JPA
+
+
+//Threads ( fios)
+
+Threads sao conjuntos de instrucoes que podem ser executados dentro 
+dos processos.Execução de forma paralela.
+O programador nao tem controle da sequencia do processo, e os servidor que faz.
+Thread
+Runnable
+
+
+//ForEach
+int[] vetorNumeros = new int[]{1,2,3,4,5,6,7,8,9,10};
+
+for(int listaNumeros:vetorNumeros){
+System.out.println("Numero: "+listaNumeros);
+}
+
+
+
+// Datas formatando e convertendo
+import java.util.TimeZone;
+SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy")
+SimpleDateFormat sdf2 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
+sdf2.setTimeZone(TimeZone.getTimeZone("GMT"));
+
+
+
+// classe Calendar
+
+Calendar cal = Calendar.getInstance();
+
+
+// Persistência de Dados
+
+JDBC 
+usar o DBeaver 21.32 para o banco de dados
+
+- baixar o driver do JDBC
+     postgreesql jdbc driver 4.2.3.1
+copiar e cola na pasta 
+1-clica no eclipe na classe principal, e clica botao direito mouse
+ 2-  Build Path.... Configure Build path.
+ 3- Clica na Aba Libraries
+ 4- seleciona Classpath
+ 5- Add External JARs..e seleciona o local do drive e clica em Apply and Close.
+
+
+// usando classe DAO
+
+-nao precisa criar com mesmo nome DAO, poderia ser
+PessoasDAO,ClientesDAO
+
+java.sql.connection
+
+- a classe DAO que faz conecao com banco de dados
+"insert into pessoa values(?,?,?)"
+
+stmt.setString(1,p.getIdPessoa()); //substitui a 1 ? pelo id
+
+
+
+//Excessões de controle de Erros.
+quando comando cancela.
+
+
+try{
+
+}catch(SQLException ex){
+   ex.getMessage();
+  }
+
+
+throws
+
+
+
+
+
+
