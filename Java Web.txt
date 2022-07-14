@@ -1,4 +1,4 @@
- acomplar back end para chamar alteracoes que queremos fazer
+ Acoplar back end para chamar as alteracoes que queremos fazer
 usando JSP java Server Pages
 linguagem de script de tipo aberto que permite gerar conteudo
 dinamico apra as paginas da internet.
@@ -6,6 +6,7 @@ ao inves de html usamos JSP que e dinamico.
 O usuario nao consegue ver a codificacao JSP ,pois esta e convertida
  diretamente  e enviada e apresentado ao usuario apenas a codificacao html
 
+//aula Capgemini
 
 1- abrir o IDE(Netbeans da aula),novo projeto e escolher java With Ant, Java web,depois escolhe
  Web Application.
