@@ -11,7 +11,6 @@ public class Funcionario {
 		//cada vez que criar um funcionario,incrementa
 		contador = contador+1;
 	}
-	
 	public double getSalario() {
 		return salario;
 	}
